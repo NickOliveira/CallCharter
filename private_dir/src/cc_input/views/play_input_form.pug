@@ -1,0 +1,15 @@
+div
+    form(action="/input_play_call", method="post") 
+        label(for="shift") Shift: 
+        select(type="text", name='shift', value='')
+            option(value="") None
+            each shift in shifts
+                option(value=shift) #{shift}
+        label(for="Formation") Formation:
+        select(type="text", name='formation', value='')
+            each formation in formations
+                option(value=formation) #{formation}
+        label(type="Run_Protection") Run/Protection:
+        select(type="text" name="run_protection" value='')
+            each run_protection in run_protections 
+                option(value=run_protection) #{run_protection}     
