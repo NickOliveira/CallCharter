@@ -6,8 +6,11 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Call Charter
 
+
         include ../../views/default_head
+        link(rel="stylesheet", href="./style/input.css")
+        link(rel="stylesheet", href="./style/switchSlide.css")
     body 
         include ../../views/header
-        h1= message
+        h1#oppenent_header= message
         include play_input_form

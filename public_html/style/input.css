@@ -1,0 +1,159 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#input_container {
+    max-width: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#down_dist_yrd {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#down_dist_yrd span {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 8vh;
+
+    margin: 2vh;
+}
+
+#down_dist_yrd span input {
+    border-radius: 40px;
+    border: 2px solid var(--primary-color);
+    padding: 1vh;
+
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#down_dist_yrd span input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+} 
+
+
+
+/* Select Input */
+#select_input {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: 1vh;
+}
+
+#select_input button {
+    margin: 1vh;
+    padding: 1vh;
+    border-radius: 40px;
+    border: 2px solid var(--primary-color);
+}
+
+/* Play Input Container */
+#select_play_container {
+    padding: 3vh;
+    border: 2px solid var(--primary-color);
+    border-radius: 25px;
+    min-width: 75vh;
+}
+
+/* Custom Play Input */
+#custom_play {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    flex-wrap: wrap;
+}
+
+#custom_play span {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;   
+
+    padding: 1vh;    
+}
+
+#custom_play span label {
+    text-align: center;
+    font-size: 1.25em;
+}
+
+#custom_play span input {
+    border: 2px solid var(--primary-color);
+    border-radius: 25px;
+    font-size: 1em;
+    max-width: max-content;
+    height: auto;
+    
+    text-align: center;
+    padding: 5px;
+}
+
+/* Submit Play Button */
+#submit_button_container {
+    margin: 1vh;
+    padding: 5px;    
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#submit_play_button {
+    background-color: var(--primary-color);
+    border: 3px solid var(--secondary-color);
+    border-radius: 25px;
+
+    font-size: 1.25em;
+    padding: 2vh;
+}
+
+
+#submit_play_button:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+/* Control Panel */
+#input_control_panel {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+    border: 2px solid var(--secondary-color);
+    min-width: 50vh;
+}
+
+#input_control_panel button {
+    margin: 1vh;
+    padding: 1vh;
+    border-radius: 40px;
+    border: 2px solid var(--primary-color);
+
+    background-color: transparent;
+    font-size: 1.15em;
+}
+
+#input_control_panel button:hover {
+    background-color: var(--secondary-color);
+
+}

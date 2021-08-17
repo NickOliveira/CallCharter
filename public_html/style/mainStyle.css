@@ -1,11 +1,16 @@
 :root {
     --primary-color: rgb(62, 144, 252);
+    --secondary-color: rgb(223, 176, 75);
 }
 
 * {
     margin: 0;
     padding: 0;
     font-family: 'Noto Sans JP', sans-serif;
+}
+
+*:focus {
+    outline: none;
 }
 
 header {

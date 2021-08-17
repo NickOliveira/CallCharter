@@ -10,6 +10,7 @@ CREATE TABLE playbook.shifts(
 
 DROP TABLE IF EXISTS playbook.formations CASCADE;
 CREATE TABLE playbook.formations(
+    team_id 
     name varchar[20]
 );
 

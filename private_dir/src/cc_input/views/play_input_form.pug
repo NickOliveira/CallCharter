@@ -1,15 +1,75 @@
-div
+div#input_container
     form(action="/input_play_call", method="post") 
-        label(for="shift") Shift: 
-        select(type="text", name='shift', value='')
-            option(value="") None
-            each shift in shifts
-                option(value=shift) #{shift}
-        label(for="Formation") Formation:
-        select(type="text", name='formation', value='')
-            each formation in formations
-                option(value=formation) #{formation}
-        label(type="Run_Protection") Run/Protection:
-        select(type="text" name="run_protection" value='')
-            each run_protection in run_protections 
-                option(value=run_protection) #{run_protection}     
+        div#down_dist_yrd
+            span
+                label(for="down") Down
+                input(type="number", name="down", min="1", max="4")
+            span
+                label(for='distance') Distance 
+                input(type="number", name='distance', min="1", max="99")
+            span
+                label(for='yardLine') Yard Line
+                input(type="number", name='yardLine', min="-49", max="50")
+
+        div#select_input
+            button Whole Play
+            button Numbered Play        
+        
+        div#select_play_container
+            div#custom_play
+                span
+                    label(for="personnel") Personnel
+                    input(type="text" list="input_personnel" name="personnel" value="" size="12") 
+                    datalist(type="text", id='input_personnel')
+                        each personnel in personnels
+                            option(value=personnel) #{personnel}
+                span
+                    label(for="shift") Shift
+                    input(type="text" list="input_shifts" name="shift" value="" size="8") 
+                    datalist(type="text", id='input_shifts')
+                        option(value="") None
+                        each shift in shifts
+                            option(value=shift) #{shift}
+                span
+                    label(for="Formation") Formation
+                    input(type="text" list="input_formations", name="formation" value="" size="12")
+                    datalist(type="text", id="input_formations")
+                        each formation in formations
+                            option(value=formation) #{formation}
+                span
+                    label.switch-slide.switch
+                        input(type="checkbox").switch-input
+                        span(data-on="Right" data-off="Left").switch-label                        
+                span 
+                    label(for="tag") Tag
+                    input(type="text" list="input_tags", name="tag" value="" size="12")
+                    datalist(type="text", id="input_tags")
+                        each tag in tags
+                            option(value=tag) #{tag}
+                span 
+                    label(for="motion") Motion
+                    input(type="text" list="input_motions", name="motion" value="" size="12")
+                    datalist(type="text", id="input_motions")
+                        each motion in motions
+                            option(value=motion) #{motion}                
+                span
+                    label(type="Run_Protection") Run/Protection
+                    input(type="text" list="input_run_protections" value="" size="15")
+                    datalist(type="text" id="input_run_protections")
+                        each run_protection in run_protections 
+                            option(value=run_protection) #{run_protection}
+                span 
+                    label(for="concept") Concept 
+                    input(type="text" list="input_concepts", name="concept" value="" size="12")
+                    datalist(type="text", id="input_concepts")
+                        each concept in concepts
+                            option(value=concept) #{concept}                 
+
+            div#numbered_play
+
+        div#submit_button_container 
+            button#submit_play_button Submit Play
+
+    div#input_control_panel 
+        button#end_quarter_button Quarter 
+        button#turnover_button Turnover
