@@ -41,11 +41,11 @@ div#input_container
                         input(type="checkbox").switch-input
                         span(data-on="Right" data-off="Left").switch-label                        
                 span 
-                    label(for="tag") Tag
-                    input(type="text" list="input_tags", name="tag" value="" size="12")
-                    datalist(type="text", id="input_tags")
-                        each tag in tags
-                            option(value=tag) #{tag}
+                    label(for="form_tag") Formation Tag
+                    input(type="text" list="input_form_tags", name="form_tag" value="" size="12")
+                    datalist(type="text", id="input_form_tags")
+                        each form_tag in form_tags
+                            option(value=form_tag) #{form_tag}
                 span 
                     label(for="motion") Motion
                     input(type="text" list="input_motions", name="motion" value="" size="12")
@@ -64,7 +64,12 @@ div#input_container
                     datalist(type="text", id="input_concepts")
                         each concept in concepts
                             option(value=concept) #{concept}                 
-
+                span 
+                    label(for="tag") Tag
+                    input(type="text" list="input_tags", name="tag" value="" size="12")
+                    datalist(type="text", id="input_tags")
+                        each tag in tags
+                            option(value=tag) #{tag}
             div#numbered_play
 
         div#submit_button_container 

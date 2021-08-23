@@ -25,5 +25,6 @@ app.use(express.static('public_html'));
 app.listen(PORT, (err) => {
     if (err) return console.log(`Cannot Listen on PORT: ${PORT}`);
     console.log(`Call Charter app listening at http://localhost:${PORT}`)
+    console.log("Configs " + process.env.DB_HOST)
 })
 
