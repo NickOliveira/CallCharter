@@ -1,5 +1,5 @@
 div#input_container
-    form(action="/input_play_call", method="post") 
+    form(action="input/inputPlayCall", method="post")#inputPlayForm
         div#down_dist_yrd
             span
                 label(for="down") Down
@@ -54,7 +54,7 @@ div#input_container
                             option(value=motion) #{motion}                
                 span.input_box
                     label(type="Run_Protection") Run/Protection
-                    input(type="text" list="input_run_protections" value="" size="15")
+                    input(type="text" list="input_run_protections" name="run_protection" value="" size="15")
                     datalist(type="text" id="input_run_protections")
                         each run_protection in run_protections 
                             option(value=run_protection) #{run_protection}

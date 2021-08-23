@@ -1,13 +1,13 @@
 const express = require('express');
 const app = express();
 const PORT = 3000;
-
 require('dotenv').config();
 
 const __VIEW_DIR = "./private_dir/src/";
 
 const input_bootstrap = require("./private_dir/src/cc_input/bootstrap");
 
+app.use(express.json())
 
 app.set('view engine', 'pug');
 app.set('views', [__VIEW_DIR + "/cc_input/views"])

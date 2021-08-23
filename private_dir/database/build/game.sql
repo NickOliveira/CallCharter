@@ -47,6 +47,7 @@ CREATE TABLE game.plays(
     gain            INTEGER,
     down            INTEGER,
     distance        INTEGER,
+    yard_line       INTEGER,
     CONSTRAINT calls_gid_fk FOREIGN KEY(team_id) REFERENCES game.games(game_id),
     CONSTRAINT calls_tid_fk FOREIGN KEY(team_id) REFERENCES team.teams(team_id)
 );
