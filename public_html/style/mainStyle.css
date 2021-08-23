@@ -1,6 +1,8 @@
 :root {
     --primary-color: rgb(62, 144, 252);
     --secondary-color: rgb(223, 176, 75);
+
+    --header-min-height: 12vh;
 }
 
 * {
@@ -15,7 +17,7 @@
 
 header {
     width: 100%;
-    min-height: 12vh;
+    min-height: var(--header-min-height);
     border-bottom: 2px solid var(--primary-color);
     display: flex;
     flex-direction: row;

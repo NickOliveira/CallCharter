@@ -17,54 +17,54 @@ div#input_container
         
         div#select_play_container
             div#custom_play
-                span
+                span.input_box
                     label(for="personnel") Personnel
                     input(type="text" list="input_personnel" name="personnel" value="" size="12") 
-                    datalist(type="text", id='input_personnel')
+                    datalist(type="text" id='input_personnel')
                         each personnel in personnels
                             option(value=personnel) #{personnel}
-                span
+                span.input_box
                     label(for="shift") Shift
                     input(type="text" list="input_shifts" name="shift" value="" size="8") 
-                    datalist(type="text", id='input_shifts')
+                    datalist(type="text" id='input_shifts')
                         option(value="") None
                         each shift in shifts
                             option(value=shift) #{shift}
-                span
+                span.input_box
                     label(for="Formation") Formation
                     input(type="text" list="input_formations", name="formation" value="" size="12")
-                    datalist(type="text", id="input_formations")
+                    datalist(type="text" id="input_formations")
                         each formation in formations
                             option(value=formation) #{formation}
-                span
+                span.input_box
                     label.switch-slide.switch
                         input(type="checkbox").switch-input
                         span(data-on="Right" data-off="Left").switch-label                        
-                span 
+                span.input_box
                     label(for="form_tag") Formation Tag
-                    input(type="text" list="input_form_tags", name="form_tag" value="" size="12")
+                    input(type="text" list="input_form_tags" name="form_tag" value="" size="12")
                     datalist(type="text", id="input_form_tags")
                         each form_tag in form_tags
                             option(value=form_tag) #{form_tag}
-                span 
+                span.input_box 
                     label(for="motion") Motion
-                    input(type="text" list="input_motions", name="motion" value="" size="12")
+                    input(type="text" list="input_motions" name="motion" value="" size="12")
                     datalist(type="text", id="input_motions")
                         each motion in motions
                             option(value=motion) #{motion}                
-                span
+                span.input_box
                     label(type="Run_Protection") Run/Protection
                     input(type="text" list="input_run_protections" value="" size="15")
                     datalist(type="text" id="input_run_protections")
                         each run_protection in run_protections 
                             option(value=run_protection) #{run_protection}
-                span 
+                span.input_box 
                     label(for="concept") Concept 
-                    input(type="text" list="input_concepts", name="concept" value="" size="12")
+                    input(type="text" list="input_concepts" name="concept" value="" size="12")
                     datalist(type="text", id="input_concepts")
                         each concept in concepts
                             option(value=concept) #{concept}                 
-                span 
+                span.input_box 
                     label(for="tag") Tag
                     input(type="text" list="input_tags", name="tag" value="" size="12")
                     datalist(type="text", id="input_tags")
@@ -73,8 +73,27 @@ div#input_container
             div#numbered_play
 
         div#submit_button_container 
-            button#submit_play_button Submit Play
+            button#complete_input_button.submit_button Done
+        
+        div#result_pop_up
+            div#result_window
+                button#close_result X
+                span.input_box
+                    label(for="new_yard_line") Yard Line
+                    input(type="number" name="new_yard_line" value="" size="2")
 
-    div#input_control_panel 
-        button#end_quarter_button Quarter 
-        button#turnover_button Turnover
+                span.input_box
+                    label(for="result") Result
+                    input(type="text" list="results" name="result" value="" size="6")
+                    datalist(type="text", id="results")
+                        option(value="Rush") Rush
+                        option(value="TD") TD
+                        option(value="Comp") Comp
+                        option(value="Inc") Inc
+                        option(value="Fumble")
+
+                button#submit_play_button.submit_button Submit
+
+script(src="/js/input.js") 
+
+    

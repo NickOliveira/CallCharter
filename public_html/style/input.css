@@ -80,7 +80,7 @@ body {
     flex-wrap: wrap;
 }
 
-#custom_play span {
+.input_box {
     display: flex;
     flex-direction: column;
     justify-content: space-between;   
@@ -88,12 +88,12 @@ body {
     padding: 1vh;    
 }
 
-#custom_play span label {
+.input_box label {
     text-align: center;
     font-size: 1.25em;
 }
 
-#custom_play span input {
+.input_box input {
     border: 2px solid var(--primary-color);
     border-radius: 25px;
     font-size: 1em;
@@ -115,7 +115,7 @@ body {
     align-items: center;
 }
 
-#submit_play_button {
+.submit_button {
     background-color: var(--primary-color);
     border: 3px solid var(--secondary-color);
     border-radius: 25px;
@@ -124,8 +124,7 @@ body {
     padding: 2vh;
 }
 
-
-#submit_play_button:hover {
+.submit_button:hover {
     background-color: var(--secondary-color);
     border-color: var(--primary-color);
     color: var(--primary-color);
@@ -156,4 +155,49 @@ body {
 #input_control_panel button:hover {
     background-color: var(--secondary-color);
 
+}
+
+/*Result Pop Up*/
+#result_pop_up {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: var(--header-min-height);
+    left:0;
+    background-color: rgb(22, 22, 22, 0.4);
+       
+}
+
+#result_window {
+    width: 70%;
+    height: 40%;
+    background-color: white;
+
+    position: absolute;
+    top:10%;
+    left: 15%;
+
+    border: solid 4px var(--secondary-color);
+    border-radius: 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+#close_result {
+    position: absolute;
+    top: 2%;
+    left: 95%;
+    width: 3%;
+
+    background-color: white;
+    border: solid 1px red;
+}
+
+#close_result:hover {
+    background-color: red;
 }
