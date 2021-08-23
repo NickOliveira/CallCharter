@@ -13,9 +13,11 @@ CREATE TABLE team.users (
     pwd_hash        VARCHAR(60)
 );
 
+/*TODO optional foriegn key into game table with same team_id*/
 CREATE TABLE team.teams (
     team_id         SERIAL PRIMARY KEY,
-    team_name       VARCHAR(50) NOT NULL
+    team_name       VARCHAR(50) NOT NULL,
+    current_game    INTEGER
 );
 
 

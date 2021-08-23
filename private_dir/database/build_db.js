@@ -27,7 +27,14 @@ async function main() {
         let var1 = await(pool.query(fileContents));
         console.log("complete...")
     } 
-    console.log("success! exiting")    
+    console.log("success! exiting")  
+    
+    if(process.env.TEST_ENV) {
+        console.log("Inputing testing data!")
+        var fileContents = fs.readFileSync("./test/testing_data.sql").toString();
+        let var1 = await(pool.query(fileContents));
+        console.log("complete...")
+    }
 }
 
 main()
