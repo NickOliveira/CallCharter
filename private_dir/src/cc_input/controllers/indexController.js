@@ -10,8 +10,7 @@ exports.getInputController = (req, res, next) => {
 
 exports.inputPlayCallAction = async (req, res, next) => {
     let data = req.body;
-    result = await plays.createPlayCall(data);
-    console.log(result)
-    //TODO Update return type
-    res.send('success');
+    result = await(plays.createPlayCall(data));  
+    console.log(result);    
+    res.json(result);
 }
