@@ -1,0 +1,45 @@
+#half_box_container {    
+    height: 28vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#left_display_container {
+    min-width: 45%;
+    min-height: 95%;
+    border: solid 3px var(--primary-color);
+    border-radius: 25px;
+}
+
+#right_display_container {
+    min-width: 45%;
+    min-height: 95%;
+    border: solid 3px var(--primary-color);
+    border-radius: 25px;
+}
+
+/*Call Table*/
+#whole_box_container {    
+    height: 60vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#call_table_container {
+    background-color: white;
+    width: 95%;
+    height: 95%;
+
+    border: solid 3px var(--primary-color);
+    border-radius: 25px;
+}
+
+#call_table {
+    width: 100%;
+}

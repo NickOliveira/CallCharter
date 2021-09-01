@@ -1,6 +1,7 @@
 inputController = require("../controllers/indexController");
 
-exports.appRoute = router => {
+exports.appRoute = (router) => {    
     router.get('/input', inputController.getInputAction);
-    router.post('/input/inputPlayCall', inputController.inputPlayCallAction);
+    router.post('/inputPlayCall', inputController.inputPlayCallAction);
+    
 }

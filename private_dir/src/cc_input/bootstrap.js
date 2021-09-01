@@ -1,5 +1,5 @@
-route = require("./routes");
+input_route = require("../cc_input/routes");
 
-module.exports = (app, router) => {
-  route.appRoute(router);
+module.exports = async (app, router) => {    
+  await input_route.appRoute(router);    
 };

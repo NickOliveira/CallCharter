@@ -1,0 +1,25 @@
+table#call_table 
+    tr 
+        th #
+        th Down 
+        th Distance 
+        th Yard Line
+        th Personnel 
+        th Formation 
+        th Run/Pro 
+        th Concept
+        th Gain/Loss 
+        th Result
+    - var num = 0;
+    each call in calls        
+        tr 
+            td= num++
+            td= call.down 
+            td= call.distance 
+            td= call.yard_line 
+            td= call.personnel 
+            td= call.formation 
+            td= call.run_protections 
+            td= call.concept 
+            td= call.gain 
+            td= call.result
