@@ -38,8 +38,24 @@
 
     border: solid 3px var(--primary-color);
     border-radius: 25px;
+
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 #call_table {
-    width: 100%;
+    width: 100%;  
+    border-collapse: collapse;    
+}
+
+#call_table tr {
+    border: 1px solid var(--secondary-color);
+}
+
+#call_table tr th {
+    font-size: 1.1em;
+}
+
+#call_table tr td {
+    text-align: center;
 }
