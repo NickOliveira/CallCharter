@@ -9,6 +9,9 @@ describe( "Calc Gain Loss Test...", () => {
     it("Starting -45, Ending 49", () => {
         assert.equal(6, fb_iq.calcGainLoss(-45, 49));
     })
+    it("Starting -40, Ending 25", () => {
+        assert.equal(35, fb_iq.calcGainLoss(-40, 25));
+    })
 
     it("Starting -45, Ending -40", () => {
         assert.equal(-5, fb_iq.calcGainLoss(-45, -40));
