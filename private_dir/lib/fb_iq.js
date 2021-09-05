@@ -1,8 +1,19 @@
 let fb_iq = {
     calcNewDownDist : (down, dist, gainLoss) => {
+        try {
+            down = parseInt(down);
+            dist = parseInt(dist);
+            gainLoss = parseInt(gainLoss);
+        }
+        catch {
+            return {
+                "down": 0,
+                "dist": 10
+            }
+        }
+
         let newDown = 0;
-        let newDist = 0;
-        console.log(down + " " + dist + " " + gainLoss)
+        let newDist = 0;        
         if( gainLoss >= dist ) {
             newDown = 1;
             newDist = 10;
@@ -22,6 +33,7 @@ let fb_iq = {
         }
     },
     calcGainLoss : (oldYardLine, newYardLine) => {
+
         if(oldYardLine < 0 && newYardLine < 0) {
             return (-1)*(newYardLine) - (-1)*(oldYardLine);
         }
